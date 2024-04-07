@@ -15,7 +15,7 @@ To build this, you need:
 1. A 1.3" OLED display with the SSD1315 driver, I2C interface, and pin order
    VCC-GND-SCK-SDA. We used [this
    screen](https://www.aliexpress.us/item/3256803932062947.html).
-2. The custom adapter PCB.
+2. The custom adapter [PCB](./pcb).
 3. One 1x3 0.1" header. We used [this
    part](https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/61300311121/4846825).
 4. One 1x4 0.1" header. We used [this
