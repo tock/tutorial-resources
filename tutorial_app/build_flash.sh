@@ -1,13 +1,15 @@
 #!/bin/bash
 
+set -e 
+
 # Update submodule to correct submodule.
-git submodule update ../ot-nrf528xx --init --recursive 
+git submodule update --init --recursive 
 
 # In an effort to use submodules for OpenThread and the ot-nrf528xx
 # repos, we copy the app and an updated CMake file into the openthread
 # repo to utilize the default build system.
-cp -r central_controller_app ../ot-nrf528xx/openthread/examples/apps 
-cp CMakeLists.txt ../ot-nrf528xx/openthread/examples/apps
+cp -r tutorial_app/central_controller_app ot-nrf528xx/openthread/examples/apps 
+cp tutorial_app/CMakeLists.txt ot-nrf528xx/openthread/examples/apps
 
 # Invoke build script within ot-nrf528xx repo, convert to hex file,
 # and flash the file to the board.
